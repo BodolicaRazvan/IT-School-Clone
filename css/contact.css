@@ -1,0 +1,186 @@
+    /* Sectiunea 1 */
+
+/* Constructie sectiune Welcome(flex) */   
+.welcome{
+    height: 50vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Constructie container Welcome */  
+.containerWelcome{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+}
+
+/* Modificari h */  
+.welcome h1{
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+    /* Sectiunea 2 */
+
+/* Constructie sectiune Contact */      
+.Contact{
+    height: auto;
+    width: 100%;
+    background-color: var(--bg-light);
+}   
+
+/* Constructie div Trainers */
+.containerContact{
+     max-width: 1200px;
+     min-width: 320px;
+     margin: auto;
+     padding: var(--spacing-medium);
+}
+
+/* Modificari aspura h2, p */  
+.Contact h2{
+    font-weight: 1000;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--text-primary);
+    padding-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+}
+
+.paragM, .paragS{
+    margin-bottom: var(--spacing-large);
+    color: var(--text-dark);
+    font-size: var(--fs-large);
+}
+
+.Contact h2, .paragM, .paragS{
+    margin-top: 0px;
+}
+
+/* Constructie container(flex) */  
+.contactCo{
+    display: flex;
+    margin-bottom: var(--spacing-large);
+}
+
+/* Constructie container ul(flex) ce ocupa 50% */  
+.contactCo ul{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-medium);
+}
+
+ul{
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+}
+
+/* Constructie container li(flex) */  
+.contactCo li{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: var(--spacing-small);
+    margin-bottom: var(--spacing-large);
+    border-bottom: 1px solid #ddd;
+}
+
+/* Modificari asupra p, a, img */  
+.contactCo li p{
+    color: var(--text-dark);
+    font-size: var(--fs-large);
+    margin: 0px;
+}
+
+.contactCo a, .contactCo .des{
+    color: #8e8e8e;
+    text-decoration: none;
+}
+
+.contactCo a:hover, .contactCo .des:hover{
+    color: var(--text-dark);
+}
+
+.contactCo img{
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
+/* Constructie container form(flex) ce ocupa 50% */  
+.contactCo form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-medium);
+}
+
+/* Modificari asupra label, input */  
+form label{
+    color: var(--text-dark);
+    font-size: var(--fs-large);
+    margin-bottom: var(--spacing-tiny);
+}
+
+.contactCo input, .contactCo textarea {
+    padding: var(--spacing-small);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: var(--spacing-medium);
+    font-size: var(--fs-medium);
+}
+
+.contactCo textarea {
+    height: 100px;
+}
+
+.contactCo input[type="submit"]{
+    font-size: var(--fs-medium);
+    text-align: center;
+    color: var(--text-white);
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: 5px;
+    padding: var(--spacing-small);
+    width: 100px;
+}
+
+    /* Display mobile */
+
+/* h1 se va modifica intr-un scris mai mic */ 
+@media (max-width: 768px){
+    .welcome h1 {
+        font-size: 2rem;
+    }
+}    
+
+/* Containerul contacCo va afisa pe o singura coloana */
+@media (max-width: 768px){
+    .contactCo {
+        flex-direction: column;
+    }
+}
+
+/* ul si cu form vor ocupa 100% din spatiul disponibil */
+@media (max-width: 768px){
+    .contactCo ul, .contactCo form {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+/* Fiecare li va avea o margine mai mica*/
+@media (max-width: 768px){
+    .contactCo li {
+        margin-bottom: var(--spacing-medium);
+    }
+}

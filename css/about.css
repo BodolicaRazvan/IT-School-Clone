@@ -1,0 +1,158 @@
+    /* Sectiunea 1 */
+
+/* Constructie sectiune Welcome(flex) */   
+.welcome{
+    height: 50vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Constructie container Welcome */  
+.containerWelcome{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+}
+
+/* Modificari h */  
+.welcome h1{
+    font-weight: 900;
+    font-size: 3.5rem;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+    /* Sectiunea 2 */
+
+/* Constructie sectiune Courses */      
+.trainers{
+    height: auto;
+    width: 100%;
+    background-color: var(--bg-light);
+}   
+
+/* Constructie div Trainers */  
+.containerTrainers{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+/* Constructie container Profesori(flex) */  
+.containerProfesori{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--spacing-large);
+}
+
+/* Constructie div pentru cei patru traineri */  
+.profCo{
+    width: calc(100%/4);
+    padding: 0px var(--spacing-small);
+}
+
+/* Constructie div ce ocupa tot spatiul alocat anterior */
+.prof{
+    width: 100%;
+    padding: var(--spacing-small);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 84px;
+    min-height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Constructie div pentru imagine rotunda si in afara containerului */
+.imgCo{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-top: -70px;
+    overflow: hidden;
+}
+
+/* Constructie div pentru imagine ce ocupa tot spatiul alocat anterior */
+.imgCo img{
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+/* Modificare continut  h3, p */
+.prof h3{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    font-size: var(--fs-xl);
+    font-weight: 400;
+    border-radius: 5px;
+    padding: var(--spacing-small) 0px;
+    margin: 0px;
+    margin-bottom: var(--spacing-large);
+    margin-top: -25px;
+    background-color: var(--bg-primary);
+    opacity: 0.9;
+    color: var(--text-secondary);
+    z-index: 1;
+}
+
+.prof p{
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin: 0px;
+}
+
+    /* Display mobile */
+
+/* Fiecare container trainer va ocupa o treime din spatiul disponibil */
+@media (max-width: 992px){
+    .trainers .profCo  {
+        width: calc(100% / 3);
+    }
+}
+
+/* h1 se va modifica intr-un scris mai mic */
+@media (max-width: 768px){
+    .welcome h1 {
+        font-size: 2rem;
+    }
+}
+
+/* Fiecare container trainer va ocupa 50%  din spatiul disponibil */
+@media (max-width: 768px){
+    .trainers .profCo {
+        width: 50%;
+    }
+}
+
+/* Fiecare container trainer va avea o intaltime minima*/
+@media (max-width: 768px){
+    .trainers .prof {
+        min-height: 310px;
+    }
+}
+
+/* Fiecare curs va ocupa 100%  din spatiul disponibil */
+@media (max-width: 576px){
+    .trainers .profCo {
+        width: 100%;
+    }
+}
+
+/* Fiecare container trainer va avea o intaltime de 0px*/
+@media (max-width: 576px){
+    .trainers .prof {
+        min-height: 0px;
+    }
+}
+

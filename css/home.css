@@ -1,0 +1,311 @@
+    /*Sectiunea unu*/
+
+/* Constructie sectiunea welcome(flex) */
+.welcome{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--bg-primary);
+}
+
+/* Constructie container welcome(flex) */
+.containerWelcome{
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+    flex-grow: 1;
+}
+
+/* Modificari la p si h */
+h1, h2, p{
+    color: var(--text-white);
+    margin: 0px;
+    padding: 0px;
+}
+
+h1{
+    font-size: 4rem;
+    margin-bottom: var(--spacing-small);
+}
+
+.welcome p{
+    font-size: var(--fs-xl);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Schimbare culoare paranteze */
+.paranteze{
+    color: var(--text-secondary);
+}
+
+/* Setari pentru pozele certificate */
+.welcome img{
+    height: 24px;
+    width: auto;
+    margin-left: var(--spacing-medium);
+}
+
+
+.welcome .cursPoze{
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Constructie 'buton' afla mai multe */
+.welcome a{
+    color: var(--text-white);
+    background-color: var(--button-color);
+    font-size: var(--fs-xl);
+    padding: var(--spacing-medium);
+    border-radius: 5px;
+    text-align: center;
+    width: 260px;
+}
+
+    /*Sectiunea doi*/
+
+/* Constructie sectiune Cursuri */  
+.containerCursuri{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+}
+
+/* Modificari  h */
+h2{
+    text-align: center;
+    margin: var(--spacing-large);
+    color: var(--text-primary);
+    font-size: 1.75rem;
+}
+
+/* Constructie container cu cele sase cursuri(flex) */
+.cursuri .calendar{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-large);
+}
+
+/* Constructie divuri  prin impartirea in trei*/
+.calendarOp{
+    width: calc(100% / 3);
+    padding-left: var(--spacing-small);
+    padding-right: var(--spacing-small);
+}
+
+/* Constructie div ce ocupa tot spatiul alocat anterior */
+.op{
+    width: 100%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: var(--spacing-tiny);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Constructie bara verde */
+.baraVerde{
+    height: 5px;
+    background-color: var(--button-color);
+    border-radius: 10px;
+}
+
+/* Modificari continut */
+.continut{
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+h3{
+    margin: 0px;
+    padding: 0px;
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: var(--spacing-large);
+    font-weight: 400;
+}
+
+/* Modificari pentru perioada si loc */
+.moduri{
+    margin-bottom: var(--spacing-large);
+}
+
+.data, .loc{
+    padding: var(--spacing-tiny);
+    font-size: var(--fs-xl);
+    color: var(--text-dark);
+}
+
+/* Setari pentru iconitele de parioada si loc */
+.cal, .pin{
+    width: 14px;
+    height: 14px;
+}
+
+/* Selectarea primul span din clasa data  */
+.data span:nth-of-type(1){
+    margin-right: 2px;
+}
+
+/* Modificari pentru spanul de locatie */
+.locatie{
+    padding: var(--spacing-tiny);
+    background-color: var(--text-secondary);
+}
+
+    /* Sectiune 3 */
+
+/* Setarea culorii pentru a treia sectiune */    
+.aboutIT{
+    background-color: var(--bg-secondary);
+}
+
+/* Constructie sectiune About */
+.containerAbout{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium) var(--spacing-small);
+}
+
+/* Modificari pentru h si p din about */
+.containerAbout h2{
+    text-align: center;
+    color: var(--text-primary);
+    margin: var(--spacing-large);
+    font-size: 2rem;
+}
+
+.containerAbout p{
+    text-align: center;
+    color: var(--text-dark);
+    margin: var(--spacing-large) var(--spacing-small);
+    margin-top: 0px;
+    font-size: var(--fs-large);
+}
+
+/* Constructie container pentru poze(flex) */
+.pozeAbout{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--fs-xl);
+}
+
+/* Constructie div cu poze */
+.poza{
+    width: calc(100% / 3) ;
+    padding-right: var(--spacing-small);
+    padding-left: var(--spacing-small);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Modificari pentru imaginile din container */
+.pozeAbout img{
+    width: 100%;
+    height: auto;
+}
+
+    /* Sectiunea 4 */
+
+/* Constructie sectiune Parteneri */
+.containerParteneri{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium) var(--spacing-medium);
+}
+
+/* Modificari pentru h */
+.containerParteneri h2{
+    text-align: center;
+    color: var(--text-primary);
+    margin: var(--spacing-large);
+    font-size: 2rem;
+}
+
+/* Constructie container Parteneri(flex) */
+.logoParteneri{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: var(--spacing-xl) ;
+    margin-right: var(--spacing-xl);
+}
+
+/* Constructie div  pentru poze*/
+.logo{
+    width: 100px;
+    margin: 0px var(--spacing-xl)  var(--spacing-medium) var(--spacing-xl) ;  
+}
+
+/* Modificari imagini */
+.logoParteneri img{
+    width: 100%;
+    height: auto;
+    filter: grayscale(100%);
+}
+
+.logoParteneri img:hover{
+    filter: grayscale(0%);
+}
+
+    /* Display mobile */
+
+/* Fiecare curs de la Cursuri va ocupa doar 50%  din spatiul disponibil */
+@media (max-width: 992px) {
+    .cursuri .calendarOp {
+        width: 50%;
+    }
+}
+
+/* Fiecare poza de la About va ocupa doar 50%  din spatiul disponibil */
+@media (max-width: 992px) {
+    .aboutIT .poza {
+        width: 50%;
+    }
+}
+
+/* Imaginile din welcome devin blocks si 'butonul' afla mai multe dispare */    
+@media (max-width: 768px) {
+    .welcome img {
+        display: block;
+        margin-top: var(--spacing-medium);
+        margin-left: var(--spacing-small);
+    }
+
+    .welcome a {
+        display: none;
+    }
+}
+
+/* Fiecare curs de la Cursuri va ocupa 100%  din spatiul disponibil */
+@media (max-width: 768px) {
+    .cursuri .calendarOp {
+        width: 100%;
+    }
+}
+
+/* Fiecare poza de la About va ocupa doar 50%  din spatiul disponibil */
+@media (max-width: 768px) {
+    .aboutIT .poza {
+        width: 100%;
+    }
+}
+
+/* Se modifica marginilie containerului Parteneri */
+@media (max-width: 768px) {
+    .parteneri .logoParteneri {
+        margin: 0 var(--spacing-small);
+    }
+}
+
+/* Se modifica marginile divurilor cu pozele partenerilor */
+@media (max-width: 576px) {
+    .parteneri .logo {
+        margin-right: var(--spacing-medium);
+        margin-left: var(--spacing-medium);
+    }
+}

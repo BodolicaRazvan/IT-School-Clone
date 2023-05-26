@@ -1,0 +1,175 @@
+    /* Sectiunea 1 */
+
+/* Constructie sectiune Welcome(flex) */   
+.welcome{
+    height: 50vh;
+    width: 100%;
+    background-color: var(--bg-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Constructie container Welcome */  
+.containerWelcome{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium);
+}
+
+/* Modificari h */  
+.welcome h1{
+    font-size: 3.5rem;
+    color: var(--text-light);
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+}
+
+    /* Sectiunea 2 */  
+
+/* Constructie sectiune Courses */      
+.courses{
+    height: auto;
+    width: 100%;
+    background-color: var(--bg-light);
+}   
+
+/* Constructie div Courses */  
+.containerCourses{
+    max-width: 1200px;
+    min-width: 320px;
+    margin: auto;
+    padding: var(--spacing-medium) var(--spacing-small) ;  
+}
+
+/* Modificare h2 si p */ 
+.courses h2{
+    color: var(--text-primary);
+    text-align: center;
+    padding-top: var(--spacing-large);
+    margin-bottom: var(--spacing-large);
+    font-size: 2rem;
+    margin-top: 0px;
+}
+
+.mainPar{
+    margin: 0px var(--spacing-small) var(--spacing-large) var(--spacing-small);
+    color: var(--text-dark);
+    text-align: center;
+    font-size: var(--fs-large);
+}
+
+/* Constructie container cu cele trei tipuri de cursuri(flex) */  
+.containerCurs{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: var(--spacing-large);
+}
+
+/* Constructie divuri  prin impartirea in trei*/
+.cursCo{
+    padding: 0px var(--spacing-small);
+    width: calc(100%/3);
+    height: auto;
+}
+
+/* Constructie div ce ocupa tot spatiul alocat anterior */
+.curs{
+    width: 100%;
+    height: auto;
+    padding: var(--spacing-tiny);
+    margin-bottom: var(--spacing-medium);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Modificare continut img, h3, p */
+.curs img{
+    width: 100%;
+    height: auto;
+    margin-bottom: var(--spacing-large);
+}
+
+.continut{
+    padding: 0px var(--spacing-small);
+}
+
+.curs h3{
+    color: var(--text-primary);
+    margin-top: 0px;
+    margin-bottom: var(--spacing-medium);
+    font-size: 1.5rem;
+}
+
+.curs p{
+    margin-top: 0px;
+    margin-bottom: 1.25rem;
+    font-size: var(--fs-large);
+    color: #666;
+}
+
+.curs p img{
+    width: 80px;
+    height: auto;
+    margin-left: var(--spacing-small);
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+
+/* Modificari pentru detalii */
+.locDat{
+    font-size: var(--fs-large);
+    color: #666;
+    margin-bottom: var(--spacing-large);
+}
+
+.locDat img{
+    width: 14px;
+    height: 14px;
+    margin-bottom: 0px;
+    vertical-align: middle;
+}
+
+/* Selectarea tuturor spanurilor cu clasa tip mai putin primul */
+.locDat .tip:not(:nth-child(1)){
+    margin-left: var(--spacing-small);
+}
+
+
+/* Construire 'buton' detalii */
+.curs a{
+    font-size: var(--fs-large);
+    text-align: center;
+    color: var(--text-white);
+    background-color: var(--button-color);
+    border: 1px solid var(--button-color);
+    border-radius: 5px;
+    padding: var(--spacing-tiny);
+    width: 100px;
+    margin-bottom: var(--spacing-medium);
+}
+
+/* Display mobile */
+
+/* Fiecare curs va ocupa 50%  din spatiul disponibil */
+@media (max-width: 992px){
+    .courses .cursCo {
+        width: 50%;
+    }
+}
+
+/* Fiecare curs va ocupa 100%  din spatiul disponibil */
+@media (max-width: 768px){
+    .courses .cursCo {
+        width: 100%;
+    }
+}
+
+/* h1 se va modifica intr-un scris mai mic */
+@media (max-width: 768px){
+    .welcome h1 {
+        font-size: 2rem;
+    }
+}
